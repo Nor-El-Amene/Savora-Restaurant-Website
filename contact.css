@@ -1,0 +1,262 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: url("download (84).jpg") no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Montserrat', sans-serif;
+  color: #eaeaea;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: -1;
+}
+
+.contact {
+  max-width: 1000px;
+  margin: auto;
+  padding: 60px 20px;
+}
+
+.contact-title {
+  text-align: center;
+  font-family: 'Tagesschrift', sans-serif;
+  font-size: 72px;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: all 1s ease;
+}
+
+.contact-title.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.contact-small {
+  display: block;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: #d6b46c;
+  margin-bottom: 60px;
+}
+
+.contact-cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 80px;
+}
+
+.card {
+  background: rgba(0,0,0,0.5);
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  flex: 1 1 30%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(255,215,0,0.4);
+}
+
+.card img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #d6b46c;
+}
+
+.card p {
+  font-size: 16px;
+  opacity: 0.85;
+}
+
+.contact-form {
+  background: rgba(0,0,0,0.6);
+  padding: 40px;
+  border-radius: 25px;
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+}
+
+.contact-form h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  color: #d6b46c;
+  margin-bottom: 30px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  border: none;
+  font-size: 16px;
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #d6b46c;
+}
+
+.contact-form textarea {
+  resize: none;
+  height: 150px;
+}
+
+.contact-form button {
+  padding: 12px 30px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  border: 1px solid #c1ac67;
+  background: transparent;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact-form button:hover {
+  background: #dbb070;
+  color: #0f1418;
+}
+
+.footer-text {
+  text-align: center;
+  font-family: 'Great Vibes', cursive;
+  font-size: 60px;
+  margin-top: 80px;
+  color: #ffffff;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1s ease;
+}
+
+.footer-text.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.top-right {
+  position: fixed;
+  top: 20px;
+  left: 25px;
+  z-index: 1000;
+}
+
+.back-btn {
+  text-decoration: none;
+  color: #ddd;
+  background: rgba(31, 31, 31, 0.95);
+  padding: 12px 18px;
+  border-radius: 14px;
+  font-size: 14px;
+  font-weight: 500;
+  border: 1px solid #333;
+  backdrop-filter: blur(6px);
+  transition: 0.3s ease;
+}
+
+.back-btn:hover {
+  background: #d6b46c;
+  color: #000000;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.45);
+}
+
+/* =========================
+   RESPONSIVE FIXES
+   ========================= */
+
+/* Make fonts scale on all devices */
+.contact-title {
+  font-size: clamp(2rem, 5vw, 4.5rem);
+}
+
+.contact-small {
+  font-size: clamp(0.8rem, 1.5vw, 1rem);
+}
+
+.card h3 {
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+}
+
+.card p {
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
+}
+
+.contact-form h3 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+.footer-text {
+  font-size: clamp(2rem, 5vw, 4rem);
+}
+
+/* Make card images scale */
+.card img {
+  width: 15vw;
+  max-width: 80px;
+  height: auto;
+}
+
+/* Wrap cards on tablets and smaller screens */
+@media (max-width: 768px) {
+  .contact-cards {
+    flex-direction: column;
+    gap: 4vh;
+  }
+
+  .card {
+    flex: 1 1 100%;
+  }
+}
+
+/* Small screens (mobiles) */
+@media (max-width: 480px) {
+  .contact-title {
+    font-size: 2.5rem;
+  }
+
+  .footer-text {
+    font-size: 2rem;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    padding: 1em;
+  }
+
+  .card img {
+    width: 60px;
+    margin-bottom: 10px;
+  }
+}

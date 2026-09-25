@@ -1,0 +1,520 @@
+body{
+     background: linear-gradient(180deg, #2b2b2b, #1f1f1f);
+}
+
+.top-right {
+  position: fixed;
+  top: 20px;
+  left: 25px;
+  z-index: 1000;
+}
+
+.back-btn {
+  text-decoration: none;
+  color: #ddd;
+  background: rgba(31, 31, 31, 0.95);
+  padding: 12px 18px;
+  border-radius: 15px;
+  font-size: 14px;
+  font-weight: 500;
+  border: 1px solid #333;
+  backdrop-filter: blur(6px);
+  transition: 0.3s ease;
+}
+
+.back-btn:hover {
+  background: #5d2323;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.45);
+}
+
+.title {
+    color: rgb(221, 217, 217);
+    margin-bottom: 0px;
+    font-family: 'Poppins', sans-serif;   /* modern clean font */
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 50px;
+}
+.menu-section {
+    flex: 1; /* This will take up all available space except for the cart */
+    min-width: 0;            /* Take remaining width */
+}
+
+.menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 20px;
+}
+
+.search-bar {
+  background:  #1f1f1f url('image_2026-01-29_162412837-removebg-preview.png') no-repeat 12px center;;
+  background-size: 20px 20px;
+  border: 1px solid #333;
+  border-radius: 10px;
+  padding: 20px 30px 20px 45px;
+  color: white;
+  outline: none;
+  transition: 0.3s;
+  width: 100%;
+  max-width: 350px;
+}
+
+.search-bar::placeholder {
+  color: #a8a7a7;
+  font-size: 14px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.search-bar:focus {
+  border-color: #9d3d3d;
+  box-shadow: 0 0 8px rgba(255, 92, 92, 0.4);
+}
+
+.title-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.date-text {
+  font-family: 'Poppins', sans-serif;   
+    font-size: 14px;                      
+    font-weight: 400;                     
+    color: #bbbbbb;                       
+    letter-spacing: 0.5px;                
+    margin-top: 4px;
+    font-style: italic;       
+    text-transform: uppercase;
+    
+}
+
+.menu-nav {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.nav-btn {
+  flex: 1; 
+  background: #1f1f1f;
+  color: #ddd;
+  border: none;
+  padding: 14px 0; 
+  border-radius: 12px;
+  font-size: 17px; 
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+  text-align: center;
+}
+.nav-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.nav-icon {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+.nav-btn:hover {
+  background: #5d2323;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.nav-btn.active {
+  background: #542424;
+  color: white;
+}
+
+
+
+.menu-item{
+    background: #1f1f1f;
+    border-radius: 16px;
+    padding: 12px;
+    width: 200px;
+    color: white;
+    transition: 0.3s;
+    
+}
+
+.menu-item:hover {
+    transform:translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+.item-img {
+    background: #111;
+    border-radius: 12px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-img img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.item-name {
+    margin-top: 10px;
+}
+
+.item-name p {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.item-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price {
+    color: hsla(0, 57%, 56%, 0.925);
+    font-weight: 500;
+    font-size: 17px;
+}
+
+.count {
+    font-size: 12px;
+    color: #a1a0a0;
+}
+
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 200px);
+    gap: 30px;
+    justify-content: start;
+}
+
+
+.cart-section {
+    width: 380px; /* Fixed width for the cart */
+    flex-shrink: 0; /* Prevents the menu from squishing the cart */
+    background: #111;
+    color: white;
+    padding: 20px;
+    border-radius: 16px; /* Added for better looks */
+    border: 1px solid #1f1f1f;
+    position: sticky;
+    top: 100px; /* Adjusted so it's not hidden behind the top padding */
+    height: calc(100vh - 140px); /* Makes it scrollable if there are many items */
+    display: flex;
+    flex-direction: column;
+}
+
+
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.cart-header h2 {
+  font-size: 20px;
+  margin: 0;
+}
+
+.table {
+  font-size: 12px;
+  color: #909090;
+}
+
+.bill-summary {
+  margin-top: 150px;   /* 🔥 space between items & totals */
+  padding-top: 15px;
+ 
+}
+
+.cart-items {
+  flex: 1;
+  overflow-y: auto;
+  margin-bottom: 20px;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #1a1a1a;
+  padding: 10px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+.cart-item img {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.item-info {
+  flex: 1;
+}
+
+.item-info h4 {
+  font-size: 14px;
+  margin: 0;
+}
+
+.item-info p {
+  font-size: 12px;
+  color: #888;
+  margin: 2px 0 0;
+}
+
+.item-right {
+  text-align: right;
+}
+
+.item-right span {
+  font-size: 13px;
+  color: #ccc;
+}
+
+.item-price {
+  color: #ff5c5c;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+
+.cart-summary {
+  border-top: 1px dashed #333;
+  padding-top: 15px;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 8px 0;
+  font-size: 13px;
+}
+
+.total-row {
+  font-size: 17px;
+  font-weight: bold;
+}
+
+/* Button */
+.print-btn {
+  margin-top: 15px;
+  width: 100%;
+  padding: 12px;
+  background: #8e3434;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.container {
+    display: flex;
+    flex-direction: row; /* Force side-by-side */
+    gap: 40px;
+    align-items: flex-start;
+    padding: 100px 40px 40px 40px;
+    max-width: 1400px; /* Optional: keeps it from getting too wide on huge screens */
+    margin: 0 auto;
+}
+
+.item-img {
+    position: relative;  /* needed for positioning the + */
+}
+
+.add-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;           /* you can switch to left:10px if you prefer */
+    width: 30px;
+    height: 30px;
+    background: #8a3636;   /* reddish circle */
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    transform: scale(0);
+    transition: 0.2s ease;
+}
+
+.menu-item:hover .add-btn {
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+
+.qty {
+    background: #9e3636;
+    color: white;
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-right: 6px;
+}
+
+/* Remove button */
+.remove-btn {
+    background: transparent;
+    border: none;
+    color: #aaa;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.remove-btn:hover {
+    color: #ff5c5c;
+    transform: scale(1.2);
+}
+
+/* Add animation when item updated */
+.cart-item.pulse {
+    transform: scale(1.05);
+    box-shadow: 0 0 12px rgba(255,92,92,0.6);
+    transition: 0.2s;
+}
+
+/* Fade out animation when removing */
+.cart-item.fade-out {
+    opacity: 0;
+    transform: translateX(20px);
+    transition: 0.2s;
+}
+
+/* ========================= */
+/* Tablets (1024px and down) */
+/* ========================= */
+@media (max-width: 1024px) {
+
+  .container {
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+  }
+
+  .cart-section {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    border-left: none;
+    border-top: 2px solid #1f1f1f;
+    padding-top: 20px;
+  }
+
+  .menu-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .menu-item {
+    width: 100%;
+  }
+
+  .title {
+    font-size: 34px;
+  }
+}
+
+
+/* ========================= */
+/* Mobile (768px and down)   */
+/* ========================= */
+@media (max-width: 768px) {
+
+  .menu-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 15px;
+  }
+
+  .search-bar {
+    width: 100%;
+  }
+
+  .menu-nav {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .nav-btn {
+    width: 100%;
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .nav-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .item-img img {
+    height: 140px;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .cart-header h2 {
+    font-size: 18px;
+  }
+}
+
+
+/* ========================= */
+/* Small phones (480px down) */
+/* ========================= */
+@media (max-width: 480px) {
+
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-nav {
+    grid-template-columns: 1fr;
+  }
+
+  .title {
+    font-size: 22px;
+  }
+
+  .back-btn {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+
+  .container {
+    padding: 10px;
+  }
+}

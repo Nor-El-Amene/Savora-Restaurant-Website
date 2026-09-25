@@ -1,0 +1,307 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background: url("download (84).jpg") no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Montserrat', sans-serif;
+  color: #eaeaea;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  z-index: -1;
+}
+
+/* BACK BUTTON */
+.back-home-fixed {
+  position: fixed;
+  top: 25px;
+  left: 25px;
+  color: #d6b46c;
+  text-decoration: none;
+  font-size: 16px;
+  z-index: 1000;
+  transition: 0.3s;
+}
+.back-home-fixed:hover {
+  color: #fff;
+  transform: translateX(-4px);
+}
+
+/* SECTION */
+.booking {
+  max-width: 900px;
+  margin: auto;
+  padding: 80px 20px;
+}
+
+/* TITLES */
+.booking-title {
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 70px;
+  margin-bottom: 10px;
+}
+
+.booking-sub {
+  text-align: center;
+  color: #d6b46c;
+  letter-spacing: 2px;
+  margin-bottom: 60px;
+}
+
+/* FORM */
+.form-row {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.input-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group label {
+  color: #d6b46c;
+  margin-bottom: 8px;
+}
+
+.input-group input {
+  padding: 12px;
+  background: rgba(0,0,0,0.5);
+  border: 1px solid #d6b46c;
+  color: #fff;
+  border-radius: 8px;
+}
+
+/* TABLES */
+.table-layout h3 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-family: 'Playfair Display', serif;
+  color: #d6b46c;
+}
+
+.zone {
+  margin-bottom: 40px;
+}
+
+.zone h4 {
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+.tables {
+  display: flex;
+  gap: 15px;
+}
+
+.table {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.table.available {
+  border: 2px solid #d6b46c;
+  color: #d6b46c;
+}
+
+.table.booked {
+  background: #444;
+  color: #888;
+  cursor: not-allowed;
+}
+
+.table.available:hover {
+  background: #d6b46c;
+  color: #000;
+}
+
+.table.selected {
+  background: #fff;
+  color: #000;
+  transform: scale(1.15);
+  box-shadow: 0 0 15px #d6b46c;
+}
+
+/* CONFIRM */
+.selected-table-text {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 18px;
+  color: #d6b46c;
+}
+
+.confirm-btn {
+  display: block;
+  margin: 50px auto 0;
+  padding: 14px 40px;
+  background: transparent;
+  border: 1px solid #d6b46c;
+  color: #fff;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.confirm-btn:hover {
+  background: #d6b46c;
+  color: #000;
+}
+
+
+.error-text {
+  text-align: center;
+  margin-top: 15px;
+  color: #ff6b6b;
+  font-size: 15px;
+}
+
+input:focus {
+  outline: none;
+  box-shadow: 0 0 8px rgba(214,180,108,0.6);
+}
+
+
+.tables-layout {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+
+.legend.available { background: rgba(214,180,108,0.8); }
+.legend.booked { background: rgba(255,255,255,0.2); }
+.legend {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-radius: 4px;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+/* =========================
+   TABLET (1024px and below)
+   ========================= */
+@media (max-width: 1024px) {
+
+  .booking {
+    padding: 60px 20px;
+  }
+
+  .booking-title {
+    font-size: 50px;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .tables {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+/* =========================
+   MOBILE (768px and below)
+   ========================= */
+@media (max-width: 768px) {
+
+  .booking {
+    padding: 50px 15px;
+  }
+
+  .booking-title {
+    font-size: 40px;
+  }
+
+  .booking-sub {
+    font-size: 14px;
+    margin-bottom: 40px;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 40px;
+  }
+
+  .input-group input {
+    padding: 10px;
+  }
+
+  .tables {
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+  }
+
+  .table {
+    width: 48px;
+    height: 48px;
+    font-size: 14px;
+  }
+
+  .confirm-btn {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .back-home-fixed {
+    top: 15px;
+    left: 15px;
+    font-size: 14px;
+  }
+}
+
+/* =========================
+   SMALL PHONES (480px and below)
+   ========================= */
+@media (max-width: 480px) {
+
+  .booking-title {
+    font-size: 32px;
+  }
+
+  .booking-sub {
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+
+  .table {
+    width: 42px;
+    height: 42px;
+    font-size: 12px;
+  }
+
+  .confirm-btn {
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+
+  .selected-table-text {
+    font-size: 16px;
+  }
+
+  .error-text {
+    font-size: 13px;
+  }
+}

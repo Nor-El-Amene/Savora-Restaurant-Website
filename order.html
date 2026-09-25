@@ -1,0 +1,576 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Order</title>
+    <link rel="stylesheet" href="order.css">
+</head>
+<body>
+    <a href="index.html" class="back-btn top-right">
+  ← Home
+</a>
+    <div class="container">
+
+        <div class="menu-section">
+           <div class="menu-header">
+                <div class="title-box">
+                    <h1 class="title">Order Your Food</h1>
+                    <p class="date-text" id="current-date"></p>
+                </div>
+
+                <input type="text" class="search-bar" placeholder="Search food...">
+            </div>
+
+            <div class="menu-nav" >
+                <button class="nav-btn" data-filter="burger">
+                    <img src="images/burger.png" class="nav-icon"> Burger
+                </button>
+
+                <button class="nav-btn" data-filter="pizza">
+                    <img src="images/pizza.png" class="nav-icon"> Pizza
+                </button>
+
+                <button class="nav-btn" data-filter="drink">
+                    <img src="images/drink.png" class="nav-icon"> Drinks
+                </button>
+
+                <button class="nav-btn" data-filter="dessert">
+                    <img src="images/gelato.png" class="nav-icon"> Desserts
+                </button>
+
+                <button class="nav-btn" data-filter="plate">
+                    <img src="images/dinner.png" class="nav-icon"> Plates
+                </button>
+            </div>
+
+            <div class="menu-grid">
+                <div class="menu-item" data-category="plate">
+                    <div class="item-img">
+                        <img src="download__80_-removebg-preview.png" alt="plate 1">
+                        <div class="add-btn">+</div>
+                    </div>
+
+                    <div class="item-name">
+                        <p>Sea Combo</p>
+                    </div>
+
+                    <div class="item-bottom">
+                        <span class="price"> $9.99</span>
+                        <span class="count"> 11 items</span>
+                    </div>
+                </div>
+
+                 <div class="menu-item" data-category="burger">
+                    <div class="item-img">
+                        <img src="Why_the_Fuddruckers_No-Bacon_Hangover_Burger_Hits_Different-removebg-preview.png" alt="plate 1">
+                        <div class="add-btn">+</div>
+                    </div>
+
+                    <div class="item-name">
+                        <p>Yolk Smash</p>
+                    </div>
+
+                    <div class="item-bottom">
+                        <span class="price"> $3.53</span>
+                        <span class="count"> 23 items</span>
+                    </div>
+                </div>
+
+            <div class="menu-item" data-category="dessert">
+                    <div class="item-img">
+                        <img src="Decadent_Chocolate_Berry_Cake___Moist__Rich___Irresistible_-removebg-preview.png" alt="plate 1">
+                        <div class="add-btn">+</div>
+                    </div>
+
+                    <div class="item-name">
+                        <p>Chocolate Berry</p>
+                    </div>
+
+                    <div class="item-bottom">
+                        <span class="price"> $4.43</span>
+                        <span class="count"> 20 items</span>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="plate">
+                    <div class="item-img">
+                        <img src="Delicious_Chicken___Goat_Cheese_dish-removebg-preview.png" alt="plate 1">
+                        <div class="add-btn">+</div>
+                    </div>
+
+                    <div class="item-name">
+                        <p>Chèvre Chicken</p>
+                    </div>
+
+                    <div class="item-bottom">
+                        <span class="price"> $4.99</span>
+                        <span class="count"> 9 items</span>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="drink">
+                    <div class="item-img">
+                        <img src="Blueberry_Photos_-_Download_Free_High-Quality_Pictures___Freepik-removebg-preview.png" alt="plate 1">
+                        <div class="add-btn">+</div>
+                    </div>
+
+                    <div class="item-name">
+                        <p>Blueberry Cloud</p>
+                    </div>
+
+                    <div class="item-bottom">
+                        <span class="price"> $6.96</span>
+                        <span class="count"> 11 items</span>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="dessert">
+                    <div class="item-img">
+                        <img src="download__97_-removebg-preview.png" alt="plate 1">
+                        <div class="add-btn">+</div>
+                    </div>
+
+                    <div class="item-name">
+                        <p>Sugar Spin</p>
+                    </div>
+
+                    <div class="item-bottom">
+                        <span class="price"> $5.79</span>
+                        <span class="count"> 4 items</span>
+                    </div>
+                </div>
+
+                  <div class="menu-item" data-category="pizza">
+                    <div class="item-img">
+                        <img src="download__95_-removebg-preview.png" alt="plate 1">
+                        <div class="add-btn">+</div>
+                    </div>
+
+                    <div class="item-name">
+                        <p>Cheesy Crisp</p>
+                    </div>
+
+                    <div class="item-bottom">
+                        <span class="price"> $5.79</span>
+                        <span class="count"> 4 items</span>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="plate">
+                    <div class="item-img">
+                        <img src="the_chef_photosession-removebg-preview.png" alt="plate 1">
+                        <div class="add-btn">+</div>
+                    </div>
+
+                    <div class="item-name">
+                        <p>Grill Steak</p>
+                    </div>
+
+                    <div class="item-bottom">
+                        <span class="price"> $11.45</span>
+                        <span class="count"> 6 items</span>
+                    </div>
+                </div>
+
+                 <div class="menu-item" data-category="drink">
+                    <div class="item-img">
+                        <img src="Strawberry_Compote_Recipe-removebg-preview.png" alt="plate 1">
+                        <div class="add-btn">+</div>
+                    </div>
+
+                    <div class="item-name">
+                        <p>Strawberry Compote</p>
+                    </div>
+
+                    <div class="item-bottom">
+                        <span class="price"> $3.445</span>
+                        <span class="count"> 24 items</span>
+                    </div>
+                </div>
+
+                 <div class="menu-item" data-category="dessert">
+                    <div class="item-img">
+                        <img src="Adventure_Bloom___adventure_bloom__on_X-removebg-preview.png" alt="plate 1">
+                        <div class="add-btn">+</div>
+                    </div>
+
+                    <div class="item-name">
+                        <p>Cocoa Crown</p>
+                    </div>
+
+                    <div class="item-bottom">
+                        <span class="price"> $3.89</span>
+                        <span class="count"> 10 items</span>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="burger">
+                    <div class="item-img">
+                        <img src="download__92_-removebg-preview.png" alt="plate 1">
+                        <div class="add-btn">+</div>
+                    </div>
+
+                    <div class="item-name">
+                        <p>Classic</p>
+                    </div>
+
+                    <div class="item-bottom">
+                        <span class="price"> $3.99</span>
+                        <span class="count"> 25 items</span>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="drink">
+                    <div class="item-img">
+                        <img src="Watermelon_smoothies_stock_image__Image_of_drinking__tasty_-_28994739-removebg-preview.png" alt="plate 1">
+                        <div class="add-btn">+</div>
+                    </div>
+
+                    <div class="item-name">
+                        <p>Watermelon</p>
+                    </div>
+
+                    <div class="item-bottom">
+                        <span class="price"> $3.89</span>
+                        <span class="count"> 10 items</span>
+                    </div>
+                </div>
+
+
+                <div class="menu-item" data-category="plate" >
+                    <div class="item-img">
+                        <img src="image_2025-12-31_075537813-removebg-preview.png" alt="plate 1">
+                        <div class="add-btn">+</div>
+                    </div>
+
+                    <div class="item-name">
+                        <p>Garden Salad</p>
+                    </div>
+
+                    <div class="item-bottom">
+                        <span class="price"> $3.79</span>
+                        <span class="count"> 15 items</span>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="pizza">
+                    <div class="item-img">
+                        <img src="Pizza_Sosis-removebg-preview.png" alt="plate 1">
+                        <div class="add-btn">+</div>
+                    </div>
+
+                    <div class="item-name">
+                        <p>Sosis</p>
+                    </div>
+
+                    <div class="item-bottom">
+                        <span class="price"> $9.10</span>
+                        <span class="count"> 18 items</span>
+                    </div>
+                </div>
+
+                 <div class="menu-item" data-category="pizza">
+                    <div class="item-img">
+                        <img src="Smereaandreea188_Author_Portfolio___Freepik-removebg-preview.png" alt="plate 1">
+                        <div class="add-btn">+</div>
+                    </div>
+
+                    <div class="item-name">
+                        <p>Garden Royale</p>
+                    </div>
+
+                    <div class="item-bottom">
+                        <span class="price"> $8.00</span>
+                        <span class="count"> 9 items</span>
+                    </div>
+                </div>
+
+                 <div class="menu-item" data-category="drink">
+                    <div class="item-img">
+                        <img src="download__96_-removebg-preview.png" alt="plate 1">
+                        <div class="add-btn">+</div>
+                    </div>
+
+                    <div class="item-name">
+                        <p>Velvet Oreo</p>
+                    </div>
+
+                    <div class="item-bottom">
+                        <span class="price"> $2.00</span>
+                        <span class="count"> 15 items</span>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="plate">
+                    <div class="item-img">
+                        <img src="Tasty_Barbecued_Chicken_Dishes-removebg-preview.png" alt="plate 1">
+                        <div class="add-btn">+</div>
+                    </div>
+
+                    <div class="item-name">
+                        <p>Smoky Chicken</p>
+                    </div>
+
+                    <div class="item-bottom">
+                        <span class="price"> $3.95</span>
+                        <span class="count"> 23 items</span>
+                    </div>
+                </div>
+
+                 <div class="menu-item" data-category="dessert">
+                    <div class="item-img">
+                        <img src="download__98_-removebg-preview.png" alt="plate 1">
+                        <div class="add-btn">+</div>
+                    </div>
+
+                    <div class="item-name">
+                        <p>Silk Square</p>
+                    </div>
+
+                    <div class="item-bottom">
+                        <span class="price"> $3.95</span>
+                        <span class="count"> 23 items</span>
+                    </div>
+                </div>
+
+                
+
+                <div class="menu-item" data-category="burger">
+                    <div class="item-img">
+                        <img src="Creamy_Chicken_Burger-removebg-preview.png" alt="plate 1">
+                        <div class="add-btn">+</div>
+                    </div>
+
+                    <div class="item-name">
+                        <p>Creamy Chiken</p>
+                    </div>
+
+                    <div class="item-bottom">
+                        <span class="price"> $6.96</span>
+                        <span class="count"> 10 items</span>
+                    </div>
+                </div>
+
+               <div class="menu-item" data-category="drink">
+                    <div class="item-img">
+                        <img src="Delicioso_Batido_De_Frutos_Rojos_Con_Paja_Y_Crema_PNG__dibujos__Batido_De_Bayas__Bebida_Afrutada__Crema_Batida_PNG_Imagen_para_Descarga_Gratuita___Pngtree-removebg-preview.png" alt="plate 1">
+                        <div class="add-btn">+</div>
+                    </div>
+
+                    <div class="item-name">
+                        <p>Dunk Dream</p>
+                    </div>
+
+                    <div class="item-bottom">
+                        <span class="price"> $5.30</span>
+                        <span class="count"> 18 items</span>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="burger">
+                    <div class="item-img">
+                        <img src="download__93_-removebg-preview.png" alt="plate 1">
+                        <div class="add-btn">+</div>
+                    </div>
+
+                    <div class="item-name">
+                        <p>Velvet Moo</p>
+                    </div>
+
+                    <div class="item-bottom">
+                        <span class="price"> $7.89</span>
+                        <span class="count"> 26 items</span>
+                    </div>
+                </div>
+
+
+                <div class="menu-item" data-category="pizza">
+                    <div class="item-img">
+                        <img src="Irresistible_BBQ_Ranch_Pizza_Recipe_From_Grandma_s_Kitchen-removebg-preview.png" alt="plate 1">
+                        <div class="add-btn">+</div>
+                    </div>
+
+                    <div class="item-name">
+                        <p>BBQ Ranch</p>
+                    </div>
+
+                    <div class="item-bottom">
+                        <span class="price"> $4.89</span>
+                        <span class="count"> 12 items</span>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="drink">
+                    <div class="item-img">
+                        <img src="Mixberry_smoothies_stock_image__Image_of_soft__antioxidants_-_28993319-removebg-preview.png" alt="plate 1">
+                        <div class="add-btn">+</div>
+                    </div>
+
+                    <div class="item-name">
+                        <p>Mixberry</p>
+                    </div>
+
+                    <div class="item-bottom">
+                        <span class="price"> $4.39</span>
+                        <span class="count"> 4 items</span>
+                    </div>
+                </div>
+
+
+                <div class="menu-item" data-category="pizza">
+                    <div class="item-img">
+                        <img src="download__94_-removebg-preview.png" alt="plate 1">
+                        <div class="add-btn">+</div>
+                    </div>
+
+                    <div class="item-name">
+                        <p>Milano Melt</p>
+                    </div>
+
+                    <div class="item-bottom">
+                        <span class="price"> $7.83</span>
+                        <span class="count"> 6 items</span>
+                    </div>
+                </div>
+
+                
+
+               
+
+              
+
+
+            </div>
+            
+            
+                     </div>
+        <div class="cart-section">
+
+            <div class="cart-header">
+                <div>
+                <h2>Order</h2>
+                <p class="table">Order N°31</p>
+                </div>
+            </div>
+
+            <div class="cart-items" id="cart-items">
+                
+            </div>
+
+            <div class="cart-summary">
+                <div class="summary-row">
+                    <span>Sub Total</span>
+                    <span id="subtotal">$0.00</span>
+                </div>
+
+                <div class="summary-row">
+                    <span>Tax (10%)</span>
+                    <span id="tax">$0.00</span>
+                </div>
+
+                <div class="summary-row total-row">
+                    <span>Total</span>
+                    <span id="total">$0.00</span>
+                </div>
+
+            <button class="print-btn">🧾 Print bills</button>
+            </div>
+
+        </div>
+
+    </div>
+
+   <div id="bill" style="display:none; font-family: Arial, sans-serif; width: 300px; padding: 20px; background: #fff; color: #222; border-radius: 12px; box-shadow: 0 0 15px rgba(0,0,0,0.2);">
+  
+  <!-- Logo / Header -->
+  <div style="text-align:center; margin-bottom: 15px;">
+    <img src="ChatGPT_Image_Jan_31__2026__04_15_25_PM-removebg-preview.png" alt="Savora Logo" style="width:80px; margin-bottom:5px;">
+    <h2 style="margin:0; font-size:22px;">Savora</h2>
+    <p style="margin:0; font-size:14px; color:#555;">Order N°31</p>
+  </div>
+
+  <hr style="border: none; border-top: 1px dashed #aaa; margin: 10px 0;">
+
+  <!-- Items container -->
+  <div id="bill-items" style="margin-bottom: 10px;"></div>
+  <div class="bill-summary">
+
+  <hr style="border: none; border-top: 1px dashed #aaa; margin: 10px 0;">
+
+  <!-- Totals -->
+  <div style="display:flex; justify-content:space-between; margin-bottom:5px;">
+    <span>Subtotal</span>
+    <span id="bill-subtotal">$0.00</span>
+  </div>
+
+  <div style="display:flex; justify-content:space-between; margin-bottom:5px;">
+    <span>Tax (10%)</span>
+    <span id="bill-tax">$0.00</span>
+  </div>
+
+  <div style="display:flex; justify-content:space-between; font-weight:bold; font-size:18px; margin-bottom:10px; ">
+    <span>Total</span>
+    <span id="bill-total">$0.00</span>
+  </div>
+
+  <p style="text-align:center; font-size:13px; color:#555; margin-top:15px;">
+    Thank you for your order ❤️
+  </p>
+</div>
+</div>
+
+
+
+        
+    <script>
+  const dateElement = document.getElementById("current-date");
+
+  const options = { day: "numeric", month: "long", year: "numeric" };
+  const today = new Date().toLocaleDateString("en-US", options);
+
+  dateElement.textContent = today;
+
+  const navButtons = document.querySelectorAll(".nav-btn");
+const menuItems = document.querySelectorAll(".menu-item");
+
+let activeFilter = null;
+
+navButtons.forEach(btn => {
+  btn.addEventListener("click", () => {
+    const filter = btn.dataset.filter;
+
+    // If clicking the same button → unselect
+    if (activeFilter === filter) {
+      activeFilter = null;
+      btn.classList.remove("active");
+
+      menuItems.forEach(item => {
+        item.style.display = "block";
+      });
+      return;
+    }
+
+    // New selection
+    activeFilter = filter;
+
+    navButtons.forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+
+    menuItems.forEach(item => {
+      item.style.display =
+        item.dataset.category === filter ? "block" : "none";
+    });
+  });
+});
+
+
+  
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<script src="order.js"></script>
+
+</body>
+</html>

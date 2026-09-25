@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Admin Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+<div class="container">
+
+  <!-- LEFT SIDEBAR -->
+  <aside class="sidebar">
+    <div class="logo">
+  <img src="yes.png" alt="Food Logo">
+  <span>Savora</span>
+</div>
+    <nav>
+      <ul>
+        <li class="active" onclick="showSection('dashboard')">Dashboard</li>
+        <li onclick="showSection('weekly')">Weekly Calendar</li>
+        <li onclick="showSection('menu-management')">Manage Menu</li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="main-content">
+
+    <!-- DASHBOARD -->
+    <section id="dashboard">
+      <header class="admin-header">
+        <h1>Dashboard</h1>
+        <p>Restaurant Control Panel</p>
+      </header>
+
+      <div class="analytics">
+        <div class="card">
+          <h3>Total Reservations</h3>
+          <p id="total">0</p>
+        </div>
+        <div class="card">
+          <h3>Today</h3>
+          <p id="today">0</p>
+        </div>
+        <div class="card">
+          <h3>Yesterday</h3>
+          <p id="yesterday">0</p>
+        </div>
+      </div>
+
+      <div class="history">
+        <h2>Reservation History</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Phone</th>
+              <th>Date</th>
+              <th>Time</th>
+              <th>Table</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="list"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- WEEKLY CALENDAR -->
+    <section id="weekly" style="display:none;">
+      <header class="admin-header">
+        <h1>Weekly Summary</h1>
+        <p>Tables Reserved / Available</p>
+      </header>
+
+      <div class="weekly-grid" id="weekly-grid">
+        <!-- JS will fill in summary cards -->
+      </div>
+    </section>
+
+    <section id="menu-management" style="display:none;">
+  <header class="admin-header">
+    <h1>Menu Management</h1>
+    <p>Add or Remove Food Items</p>
+  </header>
+
+  <div class="card" style="margin-bottom: 20px;">
+    <h3>Add New Item</h3>
+    <form action="./api/save_menu_item.php" method="POST" class="admin-form">
+  <input type="text" name="item_name" placeholder="Item Name" required style="padding: 5px;">
+  <select name="category" style="padding: 5px;">
+    <option value="burger">Burger</option>
+    <option value="pizza">Pizza</option>
+    <option value="drink">Drink</option>
+    <option value="dessert">Dessert</option>
+    <option value="plate">Plate</option>
+  </select>
+  <input type="number" step="0.01" name="price" placeholder="Price" required style="padding: 5px;">
+  <input type="text" name="image_path" placeholder="Image Filename" required style="padding: 5px;">
+  
+  <button type="submit" class="confirm-btn" id="save-item-btn">Save Item</button>
+</form>
+  </div>
+
+  <div class="history">
+    <h2>Current Menu</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Category</th>
+          <th>Price</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="menu-list">
+        </tbody>
+    </table>
+  </div>
+</section>
+
+  </main>
+
+</div>
+
+<script src="admin.js"></script>
+</body>
+</html>

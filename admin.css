@@ -1,0 +1,286 @@
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  color: #eaeaea;
+  background: #0f1418;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 220px;
+  background: #12161b;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar h2 {
+  font-family: 'Playfair Display', serif;
+  color: #d6b46c;
+  margin-bottom: 40px;
+  font-size: 22px;
+}
+
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar nav ul li {
+  margin-bottom: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #eaeaea;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.sidebar nav ul li:hover,
+.sidebar nav ul li.active {
+  background: #d6b46c;
+  color: #0f1418;
+}
+
+/* MAIN CONTENT */
+.main-content {
+  flex: 1;
+  padding: 30px;
+  overflow-x: hidden;
+}
+
+/* ANALYTICS CARDS */
+.analytics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.card {
+  background: radial-gradient(circle at top, #1b1f26, #12161b);
+  padding: 25px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.card h3 {
+  color: #d6b46c;
+  font-size: 16px;
+}
+
+.card p {
+  font-size: 36px;
+  margin-top: 10px;
+}
+
+/* TABLE */
+.history h2 {
+  margin-bottom: 15px;
+  color: #d6b46c;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #151a20;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+th, td {
+  padding: 12px;
+  text-align: center;
+}
+
+thead {
+  background: #1c222b;
+}
+
+tbody tr:hover {
+  background: #1f2630;
+}
+
+/* BUTTONS */
+.confirm-btn {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.refuse-btn {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* WEEKLY GRID */
+.weekly-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.weekly-card {
+  background: #151a20;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+}
+
+.weekly-card h4 {
+  color: #d6b46c;
+  margin-bottom: 10px;
+}
+
+.weekly-card p {
+  font-size: 14px;
+  margin: 5px 0;
+}
+.logo {
+  display: flex;
+  align-items: center;   /* vertically center image and text */
+  gap: 12px;   
+  margin-bottom: 70px;          /* space between image and text */
+}
+
+.logo img {
+  max-width: 70px;       /* adjust size of your logo */
+  height: auto;
+}
+
+.logo span {
+  font-family: 'Pacifico', cursive;  /* playful/elegant font */
+  font-size: 38px;
+  color: #fff;                        /* white text */
+  letter-spacing: 1px;
+}
+
+/* =========================
+   TABLET (1024px and below)
+   ========================= */
+@media (max-width: 1024px) {
+
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+  }
+
+  .sidebar nav ul {
+    display: flex;
+    gap: 20px;
+  }
+
+  .sidebar nav ul li {
+    margin-bottom: 0;
+  }
+
+  .logo {
+    margin-bottom: 0;
+  }
+
+  .analytics {
+    grid-template-columns: 1fr;
+  }
+
+  .weekly-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* =========================
+   MOBILE (768px and below)
+   ========================= */
+@media (max-width: 768px) {
+
+  .main-content {
+    padding: 20px 15px;
+  }
+
+  /* Sidebar becomes top bar */
+  .sidebar {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .sidebar nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* Analytics cards stack */
+  .analytics {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .card p {
+    font-size: 28px;
+  }
+
+  /* Table becomes scrollable */
+  .history {
+    overflow-x: auto;
+  }
+
+  table {
+    min-width: 600px;
+  }
+
+  /* Weekly cards */
+  .weekly-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
+
+/* =========================
+   SMALL PHONES (480px and below)
+   ========================= */
+@media (max-width: 480px) {
+
+  .logo span {
+    font-size: 28px;
+  }
+
+  .card {
+    padding: 18px;
+  }
+
+  .card p {
+    font-size: 24px;
+  }
+
+  th, td {
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  .confirm-btn,
+  .refuse-btn {
+    padding: 5px 8px;
+    font-size: 12px;
+  }
+}

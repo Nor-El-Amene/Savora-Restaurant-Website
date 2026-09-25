@@ -1,0 +1,575 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #0f1418;
+  color: #eee;
+  font-family: 'Inter', sans-serif;
+}
+
+/* HEADER */
+.header {
+  position: absolute;
+  width: 100%;
+  padding: 30px 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* New font import */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap'); /* playful & elegant script */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap'); /* modern sans-serif */
+
+.logo {
+  display: flex;
+  align-items: center;   /* vertically center image and text */
+  gap: 12px;             /* space between image and text */
+}
+
+.logo img {
+  max-width: 70px;       /* adjust size of your logo */
+  height: auto;
+}
+
+.logo span {
+  font-family: 'Pacifico', cursive;  /* playful/elegant font */
+  font-size: 38px;
+  color: #fff;                        /* white text */
+  letter-spacing: 1px;
+}
+
+/* NAV LINK STYLING */
+.header nav a {
+  margin: 0 18px;
+  color: #ccc;
+  text-decoration: none;
+  font-size: 15px;
+  position: relative;
+  transition: all 0.3s ease; /* smooth animation */
+}
+
+/* Hover effect */
+.header nav a:hover {
+  color: #d8a96b; /* highlight color on hover */
+  transform: scale(1.1); /* slight zoom */
+}
+
+/* Underline animation */
+.header nav a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #d8a96b;
+  left: 0;
+  bottom: -4px;
+  transition: width 0.3s ease;
+}
+
+.header nav a:hover::after {
+  width: 100%;
+}
+
+/* Active link */
+.header nav a.active {
+  color: #d8a96b;
+}
+
+.header nav a.active::after {
+  width: 100%;
+}
+
+.cta {
+  background: linear-gradient(135deg, #d8a96b, #f2c37f); /* gold gradient */
+  border: none;
+  padding: 12px 28px;
+  cursor: pointer;
+  font-weight: 400;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  color: #ffffff; /* dark text for contrast */
+  border-radius: 20px; /* rounded pill shape */
+  box-shadow: 0 6px 15px rgba(216, 169, 107, 0.4);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+
+}
+
+/* Hover effect */
+.cta:hover {
+  transform: translateY(-3px) scale(1.05); /* slight lift + zoom */
+  box-shadow: 0 10px 20px rgba(216, 169, 107, 0.5);
+}
+
+/* Optional glowing effect */
+.cta::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.cta:hover::before {
+  opacity: 1;
+}
+/* Add arrow */
+.cta::after {
+  content: ' →'; /* arrow character */
+  margin-left: 6px;
+  transition: transform 0.3s ease;
+  display: inline-block;
+  color: white;
+}
+
+/* Hover animation for arrow */
+.cta:hover::after {
+  transform: translateX(5px); /* arrow moves slightly right on hover */
+}
+
+/* HERO */
+
+.hero {
+  height: 100vh;
+  background:
+    linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),
+    url("Maki\ Sushi\ Menu\ _\ Food\ Photography.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content {
+  text-align: center;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 80px;
+  margin-bottom: 20px;
+  font-weight: 100;
+}
+
+.hero p {
+  font-size: 16px;          /* slightly bigger for readability */
+  max-width: 440px;         /* limit width for better line breaks */
+  margin: 0 auto 30px auto; /* center and maintain bottom spacing */
+  line-height: 1.6;         /* spacing between lines */
+  text-align: center;       /* center text */
+  color: #ddd;              /* slightly lighter than white for soft look */
+}
+
+.btn {
+  padding: 12px 30px;
+  border: 1px solid #c1ac67;        /* white border */
+  color: #fff;                   /* white text */
+  text-decoration: none;
+  font-size: 14px;               /* slightly bigger for elegance */
+  border-radius: 15px;           /* rounded corners */
+  transition: all 0.3s ease;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hover effect */
+.btn:hover {
+  background: #dbb070;               /* white background on hover */
+  color: #0f1418;                 /* dark text when hovered */
+  transform: translateY(-2px);    /* subtle lift */
+  box-shadow: 0 6px 12px rgba(255, 255, 255, 0.3);
+}
+
+/* Optional subtle arrow like cta */
+.btn::after {
+  content: ' →';
+  margin-left: 5px;
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+.btn:hover::after {
+  transform: translateX(5px);
+}
+
+
+
+
+
+
+
+
+/* ABOUT */
+.about {
+  display: flex;
+  align-items: center;           /* vertically center text and image */
+  justify-content: center;       /* center the whole flex container horizontally */
+  padding: 120px 50px;           /* adjust side padding */
+  gap: 150px;
+  flex-wrap: wrap;               /* allow stacking on smaller screens */
+  max-width: 1600px;             /* limit width so content stays centered */
+  margin: 0 auto;                /* center the about section on the page */
+}
+
+.about-image {
+  flex: 0 0 35%;                 /* left side */
+  max-width: 1000px;
+  height: 500px;
+  background: url("Yummy_burger-removebg-preview.png") center/cover no-repeat;
+  border-radius: 12px;
+}
+
+.about-text {
+  flex: 1;                        /* right side */
+  text-align: left;
+}
+
+.section-label {
+  color: #d8a96b;
+  letter-spacing: 2px;
+  font-size: 42px;
+  font-family: 'Great Vibes', cursive; /* fancy script font */
+}
+
+.about-text h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 60px;
+  margin: 20px 0;
+  font-weight: 100;
+}
+.about-text p {
+  font-family: 'Merriweather', serif;  /* elegant serif font */
+  font-size: 16px;                     /* readable size */
+  line-height: 1.8;                    /* airy spacing between lines */
+  color: #eee;                          /* soft white text */
+  letter-spacing: 0.5px;               /* subtle spacing for elegance */
+  margin-bottom: 20px;  
+  max-width: 650px;                /* spacing from elements below */
+}
+/* Container for all features */
+.features {
+  display: flex;        /* Keep both feature divs on the same line */
+  gap: 100px;            /* Space between the features */
+  flex-wrap: wrap;      /* Optional: wraps to new line on small screens */
+}
+
+/* Each feature box */
+.feature {
+  display: flex;
+  flex-direction: column;  /* Stack title+icon on top, paragraph below */
+  align-items: flex-start; /* Align content to left */
+  font-family: 'Playfair Display', serif;
+  color: #f7f5f5;
+}
+
+/* Icon + title row */
+.feature-text {
+  display: flex;
+  align-items: center;     /* Icon and title vertically centered */
+  gap: 10px;               /* Space between icon and title */
+}
+
+/* Icon */
+.feature img {
+  width: 66px;
+  height: 66px;
+  object-fit: contain;
+  opacity: 0.85;
+}
+
+/* Title */
+.feature span {
+  font-size: 20px;
+}
+
+/* Paragraph below icon+title */
+.feature p {
+  margin-top: 1px;   
+  margin-left: 70px;       /* Space between title row and paragraph */
+  font-family: 'Playfair Display', serif;
+  font-size: 13px;
+  color: #ffffffce;
+  line-height: 2;
+  max-width: 240px;
+}
+
+.about ul {
+  list-style: none; /* remove default bullets */
+  padding-left: 0;  /* remove extra left padding */
+}
+
+.about ul li {
+  position: relative;          /* for positioning the check */
+  margin-bottom: 20px;
+  padding-left: 30px;          /* space for the check */
+  color: #ddd;                 /* optional text color */
+  font-family: 'Playfair Display', serif;
+}
+
+.about ul li::before {
+  content: "✔";               /* check mark */
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #be9258;             /* golden color */
+  font-size: 20px;            /* adjust size if needed */
+  line-height: 1;             /* align with text */
+}
+
+/* Hidden by default */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px); /* start slightly below */
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* When element is visible */
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+
+
+/* SERVICES */
+.services {
+  text-align: center;
+  padding: 120px 80px;
+}
+
+.services h2 {
+ font-family: 'Playfair Display', serif;
+  font-size: 50px;
+  margin-bottom: 60px;
+  font-weight: 100;
+}
+.cards h3 {
+  font-family: 'Playfair Display', serif;  /* elegant serif font */
+  font-size: 20px;                         /* adjust size as needed */
+  font-weight: 500;                         /* medium weight for elegance */
+  color: #fff;                              /* text color */
+  margin: 10px 0 5px 0;                     /* space around the title */
+  letter-spacing: 0.5px;                    /* subtle spacing for refinement */
+  text-align: center;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.card {
+  width: 220px;
+  height: 270px;
+  border: 1px solid #333;
+  background-color: rgba(55, 55, 55, 0.164);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card.active {
+  border-color: #d8a96b;
+}
+.card-icon {
+  width: 100px;       /* adjust size as needed */
+  height: 100px;
+  margin-bottom: 15px; /* space between icon and title */
+  object-fit: contain;
+}
+.card-text {
+  font-family: 'Merriweather', serif; /* or any font you like */
+  font-size: 13px;
+  color: #aaa;
+  text-align: center;
+  margin-top: 8px;    /* space between title and paragraph */
+  line-height: 1.5;
+  max-width: 180px;   /* optional: prevent text from overflowing */
+}
+
+/* =========================
+   TABLET RESPONSIVE (1024px and below)
+   ========================= */
+@media (max-width: 1024px) {
+
+  .header {
+    padding: 20px 40px;
+  }
+
+  .hero h1 {
+    font-size: 60px;
+  }
+
+  .about {
+    gap: 60px;
+    padding: 80px 30px;
+  }
+
+  .about-image {
+    height: 400px;
+  }
+
+  .about-text h2 {
+    font-size: 45px;
+  }
+
+  .features {
+    gap: 40px;
+  }
+
+  .services {
+    padding: 80px 40px;
+  }
+
+  .cards {
+    flex-wrap: wrap;
+    gap: 25px;
+  }
+}
+
+/* =========================
+   MOBILE RESPONSIVE (768px and below)
+   ========================= */
+@media (max-width: 768px) {
+
+  /* HEADER */
+  .header {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    position: relative;
+  }
+
+  .header nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .header nav a {
+    margin: 5px 10px;
+    font-size: 14px;
+  }
+
+  .cta {
+    padding: 10px 20px;
+    font-size: 13px;
+  }
+
+  /* HERO */
+  .hero {
+    height: auto;
+    padding: 100px 20px;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+    line-height: 1.2;
+  }
+
+  .hero p {
+    font-size: 14px;
+    max-width: 100%;
+  }
+
+  /* ABOUT */
+  .about {
+    flex-direction: column;
+    gap: 40px;
+    padding: 60px 20px;
+    text-align: center;
+  }
+
+  .about-image {
+    width: 100%;
+    height: 300px;
+  }
+
+  .about-text {
+    text-align: center;
+  }
+
+  .about-text h2 {
+    font-size: 36px;
+  }
+
+  .features {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .feature {
+    align-items: center;
+    text-align: center;
+  }
+
+  .feature p {
+    margin-left: 0;
+    max-width: 260px;
+  }
+
+  .about ul li {
+    text-align: left;
+  }
+
+  /* SERVICES */
+  .services {
+    padding: 60px 20px;
+  }
+
+  .services h2 {
+    font-size: 36px;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+  }
+
+  .card {
+    width: 90%;
+    max-width: 320px;
+  }
+}
+
+/* =========================
+   SMALL PHONES (480px and below)
+   ========================= */
+@media (max-width: 480px) {
+
+  .logo span {
+    font-size: 28px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .section-label {
+    font-size: 28px;
+  }
+
+  .about-text h2 {
+    font-size: 28px;
+  }
+
+  .services h2 {
+    font-size: 28px;
+  }
+}
