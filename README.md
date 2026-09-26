@@ -27,7 +27,28 @@ Savora is a full-stack restaurant website developed with **HTML, CSS, JavaScript
 *  Database-backed restaurant management
 
 
-## 🗄️ Database
+##  Gallery & Screenshots
+
+### Customer Interface
+| Home Page | Menu Page |
+| :---: | :---: |
+| ![Home Page](images/home.jpg)[cite: 5] | ![Menu Page](images/menu.jpg)[cite: 2] |
+
+| About Us | Order System |
+| :---: | :---: |
+| ![About Us](images/about.jpg)[cite: 3] | ![Order System](images/order.jpg)[cite: 4] |
+
+| Table Booking | Contact Section |
+| :---: | :---: |
+| ![Table Booking](images/book.jpg)[cite: 6] | ![Contact Section](images/contactt.jpg)[cite: 7] |
+
+### Administrative Dashboard
+| Admin Dashboard | Menu Management |
+| :---: | :---: |
+| ![Admin Dashboard](images/admin-dashboard.jpg)[cite: 1] | ![Menu Management](images/admin-menu.jpg)[cite: 8] |
+
+
+##  Database
 
 The application uses **MySQL** for storing and managing restaurant-related data.
 
